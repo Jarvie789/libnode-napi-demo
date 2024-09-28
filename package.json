@@ -1,0 +1,32 @@
+{
+  "name": "libnode",
+  "version": "1.0.0",
+  "description": "A simple Node.js NAPI addon",
+  "main": "index.js",
+  "scripts": {
+    "clean": "cmake-js clean",
+    "format": "clang-format --style=Chromium -i src/*.cc src/*.h src/linux/*.cc src/linux/*.c src/macos/*.mm src/win32/*.cc",
+    "build:debug": "cmake-js rebuild --CDCMAKE_OSX_ARCHITECTURES=\"arm64;x86_64\" --debug",
+    "build:release": "cmake-js rebuild --CDCMAKE_OSX_ARCHITECTURES=\"arm64;x86_64\""
+  },
+  "author": "jarvie789",
+  "devDependencies": {
+    "clang-format": "^1.8.0",
+    "cmake-js": "^7.2.1",
+    "node-addon-api": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=10.15.3"
+  },
+  "os": [
+    "darwin",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "dependencies": {
+    "bindings": "^1.5.0"
+  }
+}
