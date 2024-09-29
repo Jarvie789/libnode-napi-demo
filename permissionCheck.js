@@ -13,7 +13,7 @@ try {
    */
 
   // Fork from node-mac-permissions@2.2.1, built with NAPI. Support macOS 10.14+
-  const permissions = require("3rdparty/macos/permissions.node");
+  const permissions = require("./3rdparty/macos/permissions.node");
 
   const wrapWithWarning = (message, nativeFunction) => (...args) => {
     console.warn(message);
