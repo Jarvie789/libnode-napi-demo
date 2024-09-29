@@ -36,7 +36,7 @@ try {
   }
 
   const screenCaptureAccess = [
-    "getWindowTitle",
+    // "getWindowTitle",
   ];
 
   for (const functionName of screenCaptureAccess) {
